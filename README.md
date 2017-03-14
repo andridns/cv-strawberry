@@ -1,6 +1,6 @@
 # cv-strawberry
 
-Image Processing Project to detect strawberries using OpenCV Computer Vision library
+Image Processing project to detect strawberries using [OpenCV](https://github.com/opencv/opencv) Computer Vision library.
 
 ## Files
 
@@ -8,7 +8,7 @@ To open the main code, simply open [`strawberry.ipynb`](strawberry.ipynb) on any
 
 ## Overview
 
-The code detects the presence of ripe strawberry in an image, then will draw an ellipse around the biggest detected strawberry in the image.
+The code detects the presence of ripe strawberry in an image, then draws an ellipse around the biggest detected strawberry in the image.
 
 ![](strawberries_found.jpg)
 
