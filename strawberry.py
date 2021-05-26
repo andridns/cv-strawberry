@@ -9,9 +9,9 @@ from __future__ import division
 #%matplotlib inline
 import sys
 import cv2
-import matplotlib
-from matplotlib import colors
-from matplotlib import pyplot as plt
+#import matplotlib
+#from matplotlib import colors
+#from matplotlib import pyplot as plt
 import numpy as np
 
 # %%
@@ -24,11 +24,11 @@ show = """ def show(image):
     
 def show_hsv(hsv):
     rgb = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
-    show(rgb)
+#    show(rgb)
     
-def show_mask(mask):
-    plt.figure(figsize=(10, 10))
-    plt.imshow(mask, cmap='gray')
+#def show_mask(mask):
+#    plt.figure(figsize=(10, 10))
+#    plt.imshow(mask, cmap='gray')
     
 def overlay_mask(mask, image):
     rgb_mask = cv2.cvtColor(mask, cv2.COLOR_GRAY2RGB)
@@ -49,7 +49,7 @@ import pandas as pd
 m,n,r = image.shape
 arr = image.reshape(m*n, -1)
 df = pd.DataFrame(arr, columns=['b', 'g', 'r'])
-df.describe()
+#df.describe()
 
 # %%
 # Convert from BGR to RGB
@@ -94,9 +94,9 @@ def show_rgb_hist(image):
     #image = cv2.imread("strawberry.jpg")
     for i,col in enumerate(colors):
         histr = cv2.calcHist([image],[i],None,[256],[0,256])
-        plt.plot(histr, color = col)
-        plt.xlim([0,256])
-        plt.show()
+#        plt.plot(histr, color = col)
+#        plt.xlim([0,256])
+#        plt.show()
 #show(image)
 #print((type(image)))
 #show_rgb_hist(image)
