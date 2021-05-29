@@ -14,6 +14,10 @@ import cv2
 #from matplotlib import pyplot as plt
 import numpy as np
 
+#Get image from webcam
+cam = cv2.VideoCapture(0)
+return_value, image = cam.read()
+
 # %%
 show = """ def show(image):
     # Figure size in inches
@@ -36,7 +40,7 @@ def overlay_mask(mask, image):
 #   show(img)
 
 # %%
-image = cv2.imread('banana.jpg')
+#image = cv2.imread('banana.jpg')
 
 # %%
 #image.shape
@@ -184,7 +188,7 @@ def find_biggest_contour(image):
     return biggest_contour, mask
 
 big_contour, red_mask = find_biggest_contour(image_red_closed_then_opened)
-show_mask(red_mask)
+#show_mask(red_mask)
 
 # %%
 overlay_mask(red_mask, image)
