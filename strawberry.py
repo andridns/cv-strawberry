@@ -13,10 +13,26 @@ import cv2
 #from matplotlib import colors
 #from matplotlib import pyplot as plt
 import numpy as np
+#!/usr/bin/env python3
+
+from picamera import PiCamera
+from time import sleep
+
+camera = PiCamera()
+#camera.start_preview()
+#sleep(5)
+camera.capture('picture.jpg')
+#camera.stop_preview()
+
+
 
 #Get image from webcam
-cam = cv2.VideoCapture(0)
-return_value, image = cam.read()
+#cam = cv2.VideoCapture(0)
+#cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+#cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+#cam.set(3, 1920)
+#cam.set(4, 1080)
+image = cv2.imread("picture.jpg")
 
 # %%
 show = """ def show(image):
